@@ -1,0 +1,212 @@
+[
+  {
+    "id": "ing_pates_spaghetti",
+    "nom": "Spaghetti",
+    "categorie": "Épicerie salée",
+    "prix_indicatif": 1.80,
+    "unite": "kg"
+  },
+  {
+    "id": "ing_oeuf",
+    "nom": "Œufs frais",
+    "categorie": "Produits frais",
+    "prix_indicatif": 0.35,
+    "unite": "pièce"
+  },
+  {
+    "id": "ing_guanciale_lardons",
+    "nom": "Lardons / Guanciale",
+    "categorie": "Boucherie / Charcuterie",
+    "prix_indicatif": 14.50,
+    "unite": "kg"
+  },
+  {
+    "id": "ing_parmesan",
+    "nom": "Parmesan râpé (Parmigiano)",
+    "categorie": "Crèmerie / Fromages",
+    "prix_indicatif": 24.00,
+    "unite": "kg"
+  },
+  {
+    "id": "ing_poivre_noir",
+    "nom": "Poivre noir moulu",
+    "categorie": "Épicerie salée",
+    "prix_indicatif": 35.00,
+    "unite": "kg"
+  },
+  {
+    "id": "ing_sel",
+    "nom": "Sel fin",
+    "categorie": "Épicerie salée",
+    "prix_indicatif": 0.90,
+    "unite": "kg"
+  },
+  {
+    "id": "ing_huile_olive",
+    "nom": "Huile d'olive vierge extra",
+    "categorie": "Épicerie salée",
+    "prix_indicatif": 11.50,
+    "unite": "l"
+  },
+  {
+    "id": "ing_oignon_jaune",
+    "nom": "Oignon jaune",
+    "categorie": "Légumes & Fruits",
+    "prix_indicatif": 1.90,
+    "unite": "kg"
+  },
+  {
+    "id": "ing_ail",
+    "nom": "Gousses d'ail",
+    "categorie": "Légumes & Fruits",
+    "prix_indicatif": 7.00,
+    "unite": "kg"
+  },
+  {
+    "id": "ing_pois_chiches",
+    "nom": "Pois chiches cuits (en boîte)",
+    "categorie": "Épicerie salée",
+    "prix_indicatif": 3.20,
+    "unite": "kg"
+  },
+  {
+    "id": "ing_lait_coco",
+    "nom": "Lait de coco",
+    "categorie": "Épicerie salée",
+    "prix_indicatif": 4.50,
+    "unite": "l"
+  },
+  {
+    "id": "ing_epinards_frais",
+    "nom": "Pousses d'épinards frais",
+    "categorie": "Légumes & Fruits",
+    "prix_indicatif": 6.50,
+    "unite": "kg"
+  },
+  {
+    "id": "ing_curry_poudre",
+    "nom": "Curry en poudre doux",
+    "categorie": "Épicerie salée",
+    "prix_indicatif": 28.00,
+    "unite": "kg"
+  },
+  {
+    "id": "ing_tomates_concassees",
+    "nom": "Tomates concassées en conserve",
+    "categorie": "Épicerie salée",
+    "prix_indicatif": 2.50,
+    "unite": "kg"
+  },
+  {
+    "id": "ing_riz_arborio",
+    "nom": "Riz Arborio (spécial Risotto)",
+    "categorie": "Épicerie salée",
+    "prix_indicatif": 3.80,
+    "unite": "kg"
+  },
+  {
+    "id": "ing_champignons_paris",
+    "nom": "Champignons de Paris bruns",
+    "categorie": "Légumes & Fruits",
+    "prix_indicatif": 4.80,
+    "unite": "kg"
+  },
+  {
+    "id": "ing_beurre",
+    "nom": "Beurre doux",
+    "categorie": "Crèmerie / Fromages",
+    "prix_indicatif": 9.50,
+    "unite": "kg"
+  },
+  {
+    "id": "ing_vin_blanc",
+    "nom": "Vin blanc sec de cuisine",
+    "categorie": "Épicerie salée",
+    "prix_indicatif": 4.00,
+    "unite": "l"
+  },
+  {
+    "id": "ing_bouillon_legumes",
+    "nom": "Bouillon de légumes",
+    "categorie": "Épicerie salée",
+    "prix_indicatif": 1.20,
+    "unite": "l"
+  },
+  {
+    "id": "ing_pommes",
+    "nom": "Pommes (Golden ou Gala)",
+    "categorie": "Légumes & Fruits",
+    "prix_indicatif": 2.60,
+    "unite": "kg"
+  },
+  {
+    "id": "ing_pate_feuilletee",
+    "nom": "Pâte feuilletée pur beurre",
+    "categorie": "Produits frais",
+    "prix_indicatif": 1.65,
+    "unite": "pièce"
+  },
+  {
+    "id": "ing_sucre_vanille",
+    "nom": "Sucre vanillé",
+    "categorie": "Épicerie sucrée",
+    "prix_indicatif": 0.40,
+    "unite": "sachet"
+  },
+  {
+    "id": "ing_sucre_poudre",
+    "nom": "Sucre en poudre",
+    "categorie": "Épicerie sucrée",
+    "prix_indicatif": 1.40,
+    "unite": "kg"
+  },
+  {
+    "id": "ing_concombre",
+    "nom": "Concombre",
+    "categorie": "Légumes & Fruits",
+    "prix_indicatif": 1.10,
+    "unite": "pièce"
+  },
+  {
+    "id": "ing_tomates_rondes",
+    "nom": "Tomates mûres",
+    "categorie": "Légumes & Fruits",
+    "prix_indicatif": 3.40,
+    "unite": "kg"
+  },
+  {
+    "id": "ing_feta",
+    "nom": "Fromage Feta AOP",
+    "categorie": "Crèmerie / Fromages",
+    "prix_indicatif": 16.00,
+    "unite": "kg"
+  },
+  {
+    "id": "ing_olives_kalamata",
+    "nom": "Olives noires Kalamata",
+    "categorie": "Épicerie salée",
+    "prix_indicatif": 12.00,
+    "unite": "kg"
+  },
+  {
+    "id": "ing_origan_seche",
+    "nom": "Origan séché",
+    "categorie": "Épicerie salée",
+    "prix_indicatif": 30.00,
+    "unite": "kg"
+  },
+  {
+    "id": "ing_ciboulette",
+    "nom": "Ciboulette fraîche",
+    "categorie": "Produits frais",
+    "prix_indicatif": 1.20,
+    "unite": "botte"
+  },
+  {
+    "id": "ing_creme_liquide",
+    "nom": "Crème liquide entière",
+    "categorie": "Crèmerie / Fromages",
+    "prix_indicatif": 3.90,
+    "unite": "l"
+  }
+]

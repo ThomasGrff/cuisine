@@ -1,0 +1,359 @@
+[
+  {
+    "id": "rec_carbonara",
+    "titre": "Pâtes à la Carbonara Traditionnelle",
+    "description": "La véritable recette romaine sans crème fraîche : de bons jaunes d'œufs, du guanciale croustillant, du parmesan fraîchement râpé et beaucoup de poivre noir.",
+    "temps_preparation": 10,
+    "temps_cuisson": 15,
+    "portions": 4,
+    "difficulte": "Facile",
+    "categorie": "Plat",
+    "image": "https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=800&q=80",
+    "tags": ["Rapide", "Italien", "Gourmand", "Moins de 30 min"],
+    "ingredients": [
+      {
+        "ingredient_id": "ing_pates_spaghetti",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_oeuf",
+        "quantite": 4,
+        "unite": "pièce"
+      },
+      {
+        "ingredient_id": "ing_guanciale_lardons",
+        "quantite": 160,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_parmesan",
+        "quantite": 80,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_poivre_noir",
+        "quantite": 5,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_sel",
+        "quantite": 10,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Faire bouillir une grande casserole d'eau salée et plonger les spaghetti pour une cuisson al dente (environ 9-10 min).",
+      "Pendant ce temps, couper le guanciale (ou les lardons) en petits dés ou lamelles et les faire dorer à la poêle à feu moyen sans matière grasse jusqu'à ce qu'ils soient bien croustillants.",
+      "Dans un bol, battre 3 jaunes d'œufs et 1 œuf entier avec le parmesan râpé et une généreuse dose de poivre noir concassé. Ajouter 2 cuillères à soupe d'eau de cuisson des pâtes pour obtenir une crème onctueuse.",
+      "Égoutter les pâtes en réservant une louche d'eau de cuisson. Verser les pâtes directement dans la poêle tiédie avec les lardons.",
+      "Retirer du feu (crucial pour ne pas cuire les œufs en omelette), verser la préparation aux œufs et au fromage, puis mélanger énergiquement en ajoutant un peu d'eau de cuisson pour créer une émulsion soyeuse.",
+      "Servir immédiatement dans des assiettes chaudes avec un supplément de parmesan râpé et un tour de moulin à poivre."
+    ]
+  },
+  {
+    "id": "rec_curry_pois_chiches",
+    "titre": "Curry de Pois Chiches, Coco & Épinards",
+    "description": "Un plat végétarien riche en saveurs et réconfortant. Les pois chiches mijotent dans une sauce douce au lait de coco parfumée au curry et à l'ail.",
+    "temps_preparation": 15,
+    "temps_cuisson": 20,
+    "portions": 4,
+    "difficulte": "Facile",
+    "categorie": "Plat",
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+    "tags": ["Végétarien", "Sans gluten", "Healthy", "Épicé doux", "Économique"],
+    "ingredients": [
+      {
+        "ingredient_id": "ing_pois_chiches",
+        "quantite": 500,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_lait_coco",
+        "quantite": 400,
+        "unite": "ml"
+      },
+      {
+        "ingredient_id": "ing_tomates_concassees",
+        "quantite": 400,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_epinards_frais",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_oignon_jaune",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_ail",
+        "quantite": 15,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_curry_poudre",
+        "quantite": 15,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_huile_olive",
+        "quantite": 20,
+        "unite": "ml"
+      },
+      {
+        "ingredient_id": "ing_sel",
+        "quantite": 5,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Émincer finement l'oignon et hacher les gousses d'ail.",
+      "Dans une sauteuse ou cocotte, faire chauffer l'huile d'olive à feu moyen. Faire suer l'oignon pendant 4 à 5 minutes jusqu'à ce qu'il devienne translucide.",
+      "Ajouter l'ail et la poudre de curry, puis remuer pendant 1 minute pour libérer tous les arômes des épices.",
+      "Verser les tomates concassées, le lait de coco et les pois chiches rincés et égouttés. Saler selon votre goût.",
+      "Laisser mijoter à feu doux et à découvert pendant 15 minutes en remuant régulièrement pour faire épaissir la sauce.",
+      "Ajouter les pousses d'épinards frais en fin de cuisson. Mélanger délicatement jusqu'à ce qu'ils soient juste tombés (2 minutes).",
+      "Déguster bien chaud, accompagné de riz basmati ou de galettes de pain naan."
+    ]
+  },
+  {
+    "id": "rec_risotto_champignons",
+    "titre": "Risotto Crémeux aux Champignons & Parmesan",
+    "description": "Un grand classique de la cuisine italienne avec du riz Arborio nacré, des champignons de Paris dorés, une touche de vin blanc et une liaison généreuse au parmesan.",
+    "temps_preparation": 15,
+    "temps_cuisson": 25,
+    "portions": 4,
+    "difficulte": "Moyen",
+    "categorie": "Plat",
+    "image": "https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=800&q=80",
+    "tags": ["Végétarien", "Gourmand", "Italien", "Réconfortant"],
+    "ingredients": [
+      {
+        "ingredient_id": "ing_riz_arborio",
+        "quantite": 320,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_champignons_paris",
+        "quantite": 350,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_bouillon_legumes",
+        "quantite": 900,
+        "unite": "ml"
+      },
+      {
+        "ingredient_id": "ing_vin_blanc",
+        "quantite": 100,
+        "unite": "ml"
+      },
+      {
+        "ingredient_id": "ing_parmesan",
+        "quantite": 70,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_beurre",
+        "quantite": 40,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_oignon_jaune",
+        "quantite": 100,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_ail",
+        "quantite": 10,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_huile_olive",
+        "quantite": 15,
+        "unite": "ml"
+      }
+    ],
+    "etapes": [
+      "Préparer le bouillon de légumes et le maintenir frémissant dans une casserole voisine.",
+      "Nettoyer et couper les champignons en lamelles. Les faire sauter vivement dans une poêle avec 10g de beurre et l'ail haché jusqu'à ce qu'ils soient bien dorés. Réserver.",
+      "Dans une sauteuse à fond épais, faire suer l'oignon finement ciselé dans l'huile d'olive sans coloration.",
+      "Ajouter le riz Arborio et le nacrer pendant 2 minutes jusqu'à ce que les grains soient translucides.",
+      "Déglacer avec le vin blanc sec et laisser réduire complètement.",
+      "Verser le bouillon louche après louche, en attendant que le liquide soit absorbé avant d'en rajouter, tout en remuant constamment (compter 18 à 20 minutes de cuisson).",
+      "Hors du feu, incorporer les champignons dorés, le reste de beurre froid et le parmesan râpé (l'étape de la mantecatura). Couvrir 2 minutes puis servir onctueux."
+    ]
+  },
+  {
+    "id": "rec_salade_grecque",
+    "titre": "Salade Grecque Fraîcheur & Feta AOP",
+    "description": "Une salade estivale croquante et colorée avec des tomates gorgées de soleil, concombre croquant, feta savoureuse, olives Kalamata et origan séché.",
+    "temps_preparation": 12,
+    "temps_cuisson": 0,
+    "portions": 4,
+    "difficulte": "Facile",
+    "categorie": "Entrée",
+    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80",
+    "tags": ["Express", "Sans cuisson", "Végétarien", "Frais", "Estival"],
+    "ingredients": [
+      {
+        "ingredient_id": "ing_tomates_rondes",
+        "quantite": 450,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_concombre",
+        "quantite": 1,
+        "unite": "pièce"
+      },
+      {
+        "ingredient_id": "ing_feta",
+        "quantite": 180,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_olives_kalamata",
+        "quantite": 80,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_oignon_jaune",
+        "quantite": 60,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_huile_olive",
+        "quantite": 35,
+        "unite": "ml"
+      },
+      {
+        "ingredient_id": "ing_origan_seche",
+        "quantite": 4,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_sel",
+        "quantite": 3,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Laver les tomates et le concombre. Couper les tomates en quartiers réguliers et le concombre en rondelles épaisses ou demi-lunes.",
+      "Émincer très finement le quart d'oignon.",
+      "Dans un grand saladier de service, disposer les tomates, le concombre, les lamelles d'oignon et les olives Kalamata.",
+      "Découper la feta en cubes réguliers (ou déposer une généreuse tranche entière sur le dessus).",
+      "Arroser généreusement d'huile d'olive vierge extra, saupoudrer d'origan séché et d'une légère pincée de sel.",
+      "Mélanger délicatement juste avant de servir bien frais."
+    ]
+  },
+  {
+    "id": "rec_tarte_pommes",
+    "titre": "Tarte Fine Feuilletée aux Pommes Caramélisées",
+    "description": "Une délicieuse tarte croustillante aux fines lamelles de pommes dorées au four avec une touche de beurre et de sucre vanillé.",
+    "temps_preparation": 15,
+    "temps_cuisson": 30,
+    "portions": 6,
+    "difficulte": "Facile",
+    "categorie": "Dessert",
+    "image": "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?auto=format&fit=crop&w=800&q=80",
+    "tags": ["Dessert", "Gourmand", "Économique", "Familial"],
+    "ingredients": [
+      {
+        "ingredient_id": "ing_pate_feuilletee",
+        "quantite": 1,
+        "unite": "pièce"
+      },
+      {
+        "ingredient_id": "ing_pommes",
+        "quantite": 600,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_beurre",
+        "quantite": 30,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_sucre_poudre",
+        "quantite": 40,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_sucre_vanille",
+        "quantite": 1,
+        "unite": "sachet"
+      }
+    ],
+    "etapes": [
+      "Préchauffer le four à 190°C (thermostat 6-7).",
+      "Dérouler la pâte feuilletée sur une plaque de cuisson recouverte de papier sulfurisé. Piquer le fond à l'aide d'une fourchette en laissant un bord de 1 cm.",
+      "Éplucher les pommes, retirer le trognon et les découper en très fines lamelles régulières.",
+      "Disposer harmonieusement les lamelles de pommes en rosace serrée sur toute la surface de la pâte.",
+      "Faire fondre les 30g de beurre et badigeonner généreusement les pommes à l'aide d'un pinceau.",
+      "Saupoudrer du mélange sucre en poudre et sucre vanillé.",
+      "Enfourner pour 25 à 30 minutes jusqu'à ce que la pâte soit bien dorée et croustillante et les pommes joliment caramélisées.",
+      "Laisser tiédir quelques instants avant de déguster avec une boule de glace vanille ou un filet de crème."
+    ]
+  },
+  {
+    "id": "rec_omelette_herbes_fromage",
+    "titre": "Omelette Moelleuse Ciboulette & Fromage",
+    "description": "L'incontournable omelette baveuse et dorée, parfumée à la ciboulette fraîche et enrichie d'une pointe de crème et de fromage fondant.",
+    "temps_preparation": 5,
+    "temps_cuisson": 6,
+    "portions": 2,
+    "difficulte": "Très facile",
+    "categorie": "Plat",
+    "image": "https://images.unsplash.com/photo-1510693206972-df098062cb71?auto=format&fit=crop&w=800&q=80",
+    "tags": ["Express", "Moins de 15 min", "Végétarien", "Pas cher"],
+    "ingredients": [
+      {
+        "ingredient_id": "ing_oeuf",
+        "quantite": 5,
+        "unite": "pièce"
+      },
+      {
+        "ingredient_id": "ing_beurre",
+        "quantite": 20,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_creme_liquide",
+        "quantite": 30,
+        "unite": "ml"
+      },
+      {
+        "ingredient_id": "ing_parmesan",
+        "quantite": 30,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_ciboulette",
+        "quantite": 0.5,
+        "unite": "botte"
+      },
+      {
+        "ingredient_id": "ing_sel",
+        "quantite": 2,
+        "unite": "g"
+      },
+      {
+        "ingredient_id": "ing_poivre_noir",
+        "quantite": 1,
+        "unite": "g"
+      }
+    ],
+    "etapes": [
+      "Dans un saladier, casser les œufs, ajouter la crème liquide, le sel et le poivre.",
+      "Ciseler finement la botte de ciboulette fraîche et l'incorporer aux œufs avec le parmesan râpé.",
+      "Battre énergiquement à la fourchette pendant 1 minute pour aérer la préparation.",
+      "Faire fondre le beurre dans une poêle antiadhésive à feu moyen-vif sans le faire brûler.",
+      "Verser les œufs battus dans la poêle chaude. Ramener délicatement les bords vers le centre avec une spatule pendant 2 minutes pour créer du volume.",
+      "Lorsque le fond est doré et le dessus encore moelleux / baveux, plier l'omelette en deux ou en trois.",
+      "Faire glisser sur une assiette chaude et déguster sans attendre avec une salade verte."
+    ]
+  }
+]

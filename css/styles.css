@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Styles personnalisés & Typographie pour Carnet de Cuisine
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: #fdfbf7;
+  color: #292524;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+/* Scrollbar personnalisée élégante */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #fef3c7;
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #d97706;
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #b45309;
+}
+
+/* Animations légères */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+/* ==========================================================================
+   Feuille de style d'impression pour cuisiner sereinement en cuisine
+   ========================================================================== */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  header, nav, #category-filters, #tag-filters, #search-input, .no-print, [data-tab-target] {
+    display: none !important;
+  }
+
+  #recipe-modal-container {
+    position: static !important;
+    display: block !important;
+    background: transparent !important;
+    padding: 0 !important;
+  }
+
+  #recipe-modal-body {
+    box-shadow: none !important;
+    border: none !important;
+    max-width: 100% !important;
+  }
+}

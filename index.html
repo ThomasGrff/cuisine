@@ -1,1 +1,295 @@
-thomas
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carnet de Cuisine & Placard Intelligent</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            amber: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              200: '#fde68a',
+              300: '#fcd34d',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+              900: '#78350f',
+              950: '#451a03',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Styles personnalisés -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="h-full flex flex-col antialiased selection:bg-amber-200 selection:text-amber-900">
+
+  <!-- ========================================================================
+       BARRE DE NAVIGATION SUPÉRIEURE
+       ======================================================================== -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-amber-100/80 shadow-sm transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-4">
+        
+        <!-- Logo & Titre de l'application -->
+        <div class="flex items-center gap-3 cursor-pointer select-none" data-tab-target="catalog">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center text-white shadow-md shadow-amber-600/20">
+            <i data-lucide="utensils-crossed" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h1 class="text-xl font-bold text-gray-900 tracking-tight leading-tight">
+              Carnet de Cuisine
+            </h1>
+            <p class="text-xs text-amber-700 font-medium hidden sm:block">
+              Recettes, Placard Intelligent & Coûts
+            </p>
+          </div>
+        </div>
+
+        <!-- Onglets de Navigation Principaux (Desktop & Tablette) -->
+        <nav class="flex items-center bg-amber-50/80 p-1.5 rounded-2xl border border-amber-200/60 shadow-inner">
+          <button 
+            data-tab-target="catalog" 
+            class="px-4 py-2 rounded-xl text-sm font-semibold transition-all flex items-center gap-2"
+          >
+            <i data-lucide="book-open" class="w-4 h-4"></i>
+            <span>Recettes</span>
+          </button>
+          
+          <button 
+            data-tab-target="pantry" 
+            class="px-4 py-2 rounded-xl text-sm font-semibold transition-all flex items-center gap-2 relative"
+          >
+            <i data-lucide="refrigerator" class="w-4 h-4"></i>
+            <span>Mon Placard</span>
+            <span 
+              id="pantry-count-badge" 
+              class="hidden px-2 py-0.5 bg-emerald-600 text-white text-[11px] font-bold rounded-full shadow-sm"
+            >
+              0
+            </span>
+          </button>
+
+          <button 
+            data-tab-target="ingredients" 
+            class="px-4 py-2 rounded-xl text-sm font-semibold transition-all flex items-center gap-2"
+          >
+            <i data-lucide="receipt" class="w-4 h-4"></i>
+            <span class="hidden sm:inline">Ingrédients & Prix</span>
+            <span class="sm:hidden">Prix</span>
+          </button>
+        </nav>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       CONTENU PRINCIPAL
+       ======================================================================== -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    
+    <!-- ======================================================================
+         SECTION 1 : CATALOGUE DE RECETTES
+         ====================================================================== -->
+    <section id="view-catalog" class="view-section animate-fade-in space-y-6">
+      
+      <!-- Barre d'outils de Recherche & Filtres -->
+      <div class="bg-white p-5 rounded-3xl border border-amber-100 shadow-sm space-y-4">
+        
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+          <!-- Champ de recherche textuelle -->
+          <div class="relative flex-1">
+            <i data-lucide="search" class="w-5 h-5 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2"></i>
+            <input 
+              type="text" 
+              id="search-input" 
+              placeholder="Rechercher une recette, un ingrédient, un tag..." 
+              class="w-full pl-12 pr-4 py-3 bg-amber-50/40 border border-amber-200/70 rounded-2xl text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:bg-white transition"
+            />
+          </div>
+
+          <!-- Compteur & Réinitialisation -->
+          <div class="flex items-center justify-between sm:justify-end gap-3 shrink-0">
+            <span id="results-count" class="text-xs font-semibold text-gray-500 bg-amber-50 px-3 py-1.5 rounded-full border border-amber-100">
+              0 recette
+            </span>
+            <button 
+              id="btn-reset-filters"
+              class="text-xs font-medium text-amber-700 hover:text-amber-900 hover:underline flex items-center gap-1"
+            >
+              <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
+              Réinitialiser
+            </button>
+          </div>
+        </div>
+
+        <!-- Filtres par catégories -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-1 custom-scrollbar" id="category-filters">
+          <!-- Généré dynamiquement en JS -->
+        </div>
+
+        <!-- Filtres par tags populaires -->
+        <div class="flex items-center gap-1.5 flex-wrap pt-2 border-t border-amber-100/60" id="tag-filters">
+          <!-- Généré dynamiquement en JS -->
+        </div>
+      </div>
+
+      <!-- Grille des Recettes -->
+      <div id="recipes-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rempli dynamiquement en JS -->
+      </div>
+
+      <!-- État vide si aucune recette ne correspond -->
+      <div id="catalog-empty-state" class="hidden text-center py-16 px-4 bg-white rounded-3xl border border-amber-100 shadow-sm max-w-md mx-auto">
+        <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i data-lucide="search-x" class="w-8 h-8"></i>
+        </div>
+        <h3 class="font-bold text-gray-900 text-lg mb-1">Aucune recette trouvée</h3>
+        <p class="text-sm text-gray-500 mb-6">Essayez de modifier vos critères de recherche ou réinitialisez les filtres.</p>
+      </div>
+
+    </section>
+
+    <!-- ======================================================================
+         SECTION 2 : DANS MON PLACARD (Moteur de suggestions)
+         ====================================================================== -->
+    <section id="view-pantry" class="view-section hidden animate-fade-in space-y-6">
+      
+      <!-- En-tête explicatif du placard -->
+      <div class="bg-gradient-to-r from-amber-600 to-amber-700 rounded-3xl p-6 sm:p-8 text-white shadow-lg shadow-amber-700/10">
+        <div class="max-w-2xl">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold uppercase tracking-wider mb-3">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-200"></i>
+            Anti-Gaspillage & Cuisine Malin
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-bold font-serif mb-2">
+            Qu'avez-vous dans votre cuisine aujourd'hui ?
+          </h2>
+          <p class="text-amber-100 text-sm sm:text-base leading-relaxed">
+            Sélectionnez les ingrédients que vous avez sous la main. Notre moteur identifie immédiatement les meilleures recettes que vous pouvez réaliser, avec le détail des ingrédients possédés et manquants.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Colonne de Gauche : Sélecteur d'ingrédients disponibles (5 cols) -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-gray-900 text-lg flex items-center gap-2">
+              <i data-lucide="check-square" class="w-5 h-5 text-amber-600"></i>
+              Mes Ingrédients Disponibles
+            </h3>
+            <button 
+              id="btn-clear-pantry"
+              class="text-xs font-semibold text-rose-600 hover:text-rose-800 transition flex items-center gap-1"
+            >
+              <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+              Vider tout
+            </button>
+          </div>
+
+          <div id="pantry-ingredients-selector" class="space-y-4">
+            <!-- Rempli par catégorie en JS -->
+          </div>
+        </div>
+
+        <!-- Colonne de Droite : Recettes Suggérées (7 cols) -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="flex items-center justify-between pb-2 border-b border-gray-200">
+            <h3 class="font-bold text-gray-900 text-lg flex items-center gap-2">
+              <i data-lucide="chef-hat" class="w-5 h-5 text-amber-600"></i>
+              Recettes Suggérées
+            </h3>
+            <span class="text-xs text-gray-500 font-medium">Classées par pertinence</span>
+          </div>
+
+          <!-- Suggestions Grid -->
+          <div id="pantry-suggestions-grid" class="space-y-4">
+            <!-- Rempli dynamiquement en JS -->
+          </div>
+
+          <!-- État : Aucun ingrédient sélectionné -->
+          <div id="pantry-no-selection-state" class="text-center py-16 px-4 bg-white rounded-3xl border border-amber-100 shadow-sm">
+            <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="shopping-basket" class="w-8 h-8"></i>
+            </div>
+            <h4 class="font-bold text-gray-900 text-base mb-1">Votre placard est vide</h4>
+            <p class="text-xs text-gray-500 max-w-sm mx-auto">
+              Cliquez sur les ingrédients à gauche pour découvrir les recettes réalisables avec ce que vous avez sous la main.
+            </p>
+          </div>
+
+          <!-- État : Aucun résultat correspondant -->
+          <div id="pantry-empty-state" class="hidden text-center py-16 px-4 bg-white rounded-3xl border border-amber-100 shadow-sm">
+            <div class="w-16 h-16 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="alert-circle" class="w-8 h-8"></i>
+            </div>
+            <h4 class="font-bold text-gray-900 text-base mb-1">Aucune recette trouvée</h4>
+            <p class="text-xs text-gray-500 max-w-sm mx-auto">
+              Essayez d'ajouter d'autres ingrédients de base (ex: pâtes, œufs, huile, oignon) pour voir apparaître des suggestions.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3 : RÉPERTOIRE D'INGRÉDIENTS & PRIX
+         ====================================================================== -->
+    <section id="view-ingredients" class="view-section hidden animate-fade-in space-y-6">
+      
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-white p-6 rounded-3xl border border-amber-100 shadow-sm">
+        <div>
+          <h2 class="text-2xl font-bold font-serif text-gray-900 mb-1">
+            Répertoire des Ingrédients & Prix Indicatifs
+          </h2>
+          <p class="text-sm text-gray-500">
+            Consultez les prix unitaires moyens utilisés pour estimer le coût de vos recettes et ajoutez-les directement à votre placard.
+          </p>
+        </div>
+      </div>
+
+      <div id="ingredients-directory-list" class="space-y-6">
+        <!-- Rempli par catégorie en JS -->
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       MODALE DE RECETTE DÉTAILLÉE (FICHE COMPLÈTE)
+       ======================================================================== -->
+  <div 
+    id="recipe-modal-container" 
+    class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4 sm:p-6 overflow-y-auto animate-fade-in"
+  >
+    <div id="recipe-modal-body" class="w-full flex justify-center">
+      <!-- Rempli dynamiquement en JS par recipe-modal.js -->
+    </div>
+  </div>
+
+  <!-- Script ES Module Principal -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
